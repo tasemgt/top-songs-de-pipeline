@@ -1,9 +1,8 @@
-Overview
+Billboard Top Songs Data Engineering Project
 ========
+This is the project submission for the DE Zoomcamp 2025. It features the designing and building of a complete end-to-end data engineering pipeline for the Billboard Top Songs dataset using modern tools and best practices.
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
-
-Project Contents
+Project Description
 ================
 
 Your Astro project contains the following files and folders:
