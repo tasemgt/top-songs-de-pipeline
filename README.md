@@ -5,7 +5,7 @@ This is the project submission for the [DE Zoomcamp 2025](https://github.com/Dat
 
 About the Dataset
 ================
-This project leverages a comprehensive [Billboard Top Songs](https://www.kaggle.com/datasets/samayashar/billboard-top-songs/data) dataset, which includes metrics like total streams, daily streams, genre, release year, TikTok virality, sentiment analysis of lyrics, and musical features like danceability and energy. However, this raw data alone is not readily usable for insights or decision-making.
+This project uses the simple [Billboard Top Songs](https://www.kaggle.com/datasets/samayashar/billboard-top-songs/data) dataset, which includes fields like songs, total streams, daily streams, genre, release year, TikTok virality, sentiment analysis of lyrics, and musical features like danceability and energy. However, this raw data alone is not readily usable for insights or decision-making.
 
 
 Problem Description 
@@ -74,44 +74,73 @@ Summary of Technologies used
 
 Data Pipeline
 ================
+<img width="802" alt="Screenshot 2025-04-09 at 17 53 37" src="https://github.com/user-attachments/assets/630f5edf-75c2-4d25-adea-827dcad2f5ec" />
 
 
+Steps to Reproduce Project
+================
 
+Prequisites:
+- Google Cloud Account
+- Terraform cli
+- Astro cli
 
+1. **Prepare Code & Environment**
+   
+   - Clone the project repo and navigate to the directory
+   - Open in vscode for better coding management & experience
+     
+     ```
+     git clone https://github.com/tasemgt/top-songs-de-pipeline.git
+     cd top-songs-de-pipeline
+     ```
+2. **Google Cloud GCP**
+   - Create an account in GCP
+   - Create Project on gcp
+   - Create service account, add ‘Storage Admin’ & ‘BigQuery Admin’ roles
+   - Create access key and download. Rename file to `de-creds.json`
+   - Create a folder inside the `include` folder called `gcp`in the project root folder and place the `de-creds.json` there
 
+3. **Terraform**
+   - Open `variables.tf` and replace project id with yours (Gotten from your gcp account project)
+   - Replace bucket name with a name you like (This will be your cloud storage bucket)
+   - Navigate to the `cd terraform` directory, in terminal terminal shell and run
+   - `terraform init` To set up and install gcp provider code in terraform directory.
+   - `terraform plan`: To see Bucket and Dataset (Data lake & Warehouse) to be built on gcp
+   - `terraform apply`: To invoke build process
 
+4. **Astro**
+   Astronomer is a managed platform and tooling layer built around Airflow. It serves as a wrapper, deployment tool, and enterprise solution for running Airflow at scale. It is used in this project to spin up ‘docker’ containers and      manage airflow processes. To read more about [Astro](https://www.astronomer.io/docs/]) To install [Astro CLI](https://www.astronomer.io/docs/astro/cli/overview) for your OS.
+   After installation:
+    - Navigate to project root directory
+    - Run the command `astro dev start` To lunch the airflow docker containers and start airflow.
 
+5. **Airflow**
+    - Visit `http://localhost:8080` to open Airflow web interface on the browser with credentials (admin:admin)
+    - Go to Admin menu and then connections to create a new connection
+    - New connection in Airflow looks like the image below
+    <br>
+    <img width="807" alt="Screenshot 2025-04-08 at 20 44 59" src="https://github.com/user-attachments/assets/40d3eae9-6bf3-4e99-8e27-61a67d5cecdf" />
+    <br>
+    <br>
+    
+    - Go to DAGs in the menu bar and run Music Dag pipeline.
+       <br>
+       <br>
+    <img width="997" alt="Screenshot 2025-04-09 at 12 34 40" src="https://github.com/user-attachments/assets/6850f874-37d5-4363-ae12-b0ccdbea054e" />
 
+6. **Metabase**
+    - Visit `http://localhost:3000` to open Metabase web interface and create a new account if not present.
+    - Fill in your personal details
+    - Add projectID, service account `gcp-creds.json` file and then connect!
+    - Select new and add a question to select a transformed dataset for visualization
+    - Select either ‘Genre Trends’, ‘Total Artists’, and ‘Yearly Streams Trend’
+    - Play around with data and make your own custom visualization.
+    - Your Dashboard should look like mine below!
+  
+    <img width="1512" alt="Music streams Dashboard" src="https://github.com/user-attachments/assets/62983f17-ba78-45ab-8e9b-088d3dcf5590" />
 
-
-
-
-Deploy Your Project Locally
-===========================
-
-1. Start Airflow on your local machine by running 'astro dev start'.
-
-This command will spin up 4 Docker containers on your machine, each for a different Airflow component:
-
-- Postgres: Airflow's Metadata Database
-- Webserver: The Airflow component responsible for rendering the Airflow UI
-- Scheduler: The Airflow component responsible for monitoring and triggering tasks
-- Triggerer: The Airflow component responsible for triggering deferred tasks
-
-2. Verify that all 4 Docker containers were created by running 'docker ps'.
-
-Note: Running 'astro dev start' will start your project with the Airflow Webserver exposed at port 8080 and Postgres exposed at port 5432. If you already have either of those ports allocated, you can either [stop your existing Docker containers or change the port](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver).
-
-3. Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
-
-You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
-
-Deploy Your Project to Astronomer
-=================================
-
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://www.astronomer.io/docs/astro/deploy-code/
 
 Contact
 =======
-
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support.
+Connect with me on LinkedIn: [Michael Tase](https://www.linkedin.com/in/michael-tase-4151216a)
