@@ -1,11 +1,18 @@
-Billboard Top Songs Data Engineering Project
+Billboard Top Songs Data Engineering Project 🎶 📊
 ========
 This is the project submission for the DE Zoomcamp 2025. It features the designing and building of a complete end-to-end data engineering pipeline for the Billboard Top Songs dataset using modern tools and best practices.
 
 Project Description
 ================
+In today's music industry, understanding how songs perform across different genres, time periods, and platforms is essential for artists, producers, and marketers alike. Platforms like TikTok and Spotify have revolutionized how music is discovered, streamed, and shared, leading to rapid changes in what makes a song go viral.
 
-Your Astro project contains the following files and folders:
+About Dataset
+================
+This project leverages a comprehensive [Billboard Top Songs](https://www.kaggle.com/datasets/samayashar/billboard-top-songs/data) dataset, which includes metrics like total streams, daily streams, genre, release year, TikTok virality, sentiment analysis of lyrics, and musical features like danceability and energy. However, this raw data alone is not readily usable for insights or decision-making.
+
+
+
+
 
 - dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG:
     - `example_astronauts`: This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut. For more on how this DAG works, see our [Getting started tutorial](https://www.astronomer.io/docs/learn/get-started-with-airflow).
