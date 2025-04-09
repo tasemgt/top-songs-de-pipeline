@@ -1,0 +1,12 @@
+music:
+ target: dev
+ outputs:
+  dev:
+    type: bigquery
+    method: service-account
+    keyfile: /usr/local/airflow/include/gcp/de-creds.json
+    project: de-project-2025-455709
+    dataset: music
+    threads: 1
+    timeout_seconds: 300
+    location: US

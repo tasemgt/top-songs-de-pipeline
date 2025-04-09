@@ -1,0 +1,19 @@
+checks for raw_music_streams: #table name
+  - schema:
+      fail:
+        when required column missing: [Song, Artist, Streams, 'Daily Streams', Genre, 'Release Year', 'Peak Position',
+          'Weeks on Chart', 'Lyrics Sentiment', 'TikTok Virality', Danceability, Acousticness, Energy]
+        when wrong column type:
+          Song: string
+          Artist: string
+          Streams: integer
+          'Daily Streams': integer
+          Genre: string
+          'Release Year': integer
+          'Peak Position': integer
+          'Weeks on Chart': integer
+          'Lyrics Sentiment': float64
+          'TikTok Virality': integer
+          Danceability: float64
+          Acousticness: float64
+          Energy: float64

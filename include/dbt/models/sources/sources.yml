@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: music
+    database: de-project-2025-455709 # Put your project id!
+
+    tables:
+      - name: raw_music_streams

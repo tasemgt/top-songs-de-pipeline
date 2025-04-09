@@ -1,0 +1,1231 @@
+[0m11:33:53.895514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff832d76e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff832d7050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff832d7410>]}
+
+
+============================== 11:33:53.896526 | 7be5fdb5-7e5b-415e-9514-17096afb280c ==============================
+[0m11:33:53.896526 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:33:53.896831 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'indirect_selection': 'eager', 'version_check': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'use_colors': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'log_format': 'default', 'warn_error': 'None', 'profiles_dir': '/usr/local/airflow/include/dbt', 'target_path': 'None', 'introspect': 'True', 'debug': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'printer_width': '80'}
+[0m11:33:54.352593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7be5fdb5-7e5b-415e-9514-17096afb280c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8145ba40>]}
+[0m11:33:54.359490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7be5fdb5-7e5b-415e-9514-17096afb280c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81204260>]}
+[0m11:33:54.360268 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:33:54.360836 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found 1 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[0m11:33:54.361226 [debug] [MainThread]: Command `dbt run` failed at 11:33:54.361111 after 0.47 seconds
+[0m11:33:54.361437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83cd0b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83301280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff811ebb00>]}
+[0m11:33:54.361612 [debug] [MainThread]: Flushing usage events
+[0m11:34:42.008888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff945f4500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff942ab890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff942a8aa0>]}
+
+
+============================== 11:34:42.010099 | cd061187-8948-4698-9868-e70eac2caaf7 ==============================
+[0m11:34:42.010099 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:34:42.010506 [debug] [MainThread]: running dbt with arguments {'log_path': '/usr/local/airflow/include/dbt/logs', 'fail_fast': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'warn_error': 'None', 'profiles_dir': '/usr/local/airflow/include/dbt', 'write_json': 'True', 'log_format': 'default', 'introspect': 'True', 'version_check': 'True', 'target_path': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'printer_width': '80', 'quiet': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'use_experimental_parser': 'False'}
+[0m11:34:42.294102 [error] [MainThread]: Encountered an error:
+'NoneType' object is not iterable
+[0m11:34:42.300526 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 142, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 158, in wrapper
+    project = load_project(
+              ^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/config/runtime.py", line 49, in load_project
+    project = Project.from_project_root(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/config/project.py", line 681, in from_project_root
+    return partial.render(renderer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/config/project.py", line 288, in render
+    return self.create_project(rendered)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/config/project.py", line 428, in create_project
+    packages = package_config_from_data(rendered.packages_dict)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/config/project.py", line 111, in package_config_from_data
+    PackageConfig.validate(packages_data)
+  File "/usr/local/airflow/dbt_venv/lib/python3.12/site-packages/dbt/contracts/project.py", line 100, in validate
+    for package in data.get("packages", data):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+
+[0m11:34:42.301516 [debug] [MainThread]: Command `dbt run` failed at 11:34:42.301298 after 0.30 seconds
+[0m11:34:42.304523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff94d27e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff921adb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92399040>]}
+[0m11:34:42.307395 [debug] [MainThread]: Flushing usage events
+[0m11:34:57.894269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb275e6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb139b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1716b70>]}
+
+
+============================== 11:34:57.895162 | 890c77a5-d1dc-47bc-b9f6-002b242a5fca ==============================
+[0m11:34:57.895162 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:34:57.895508 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'profiles_dir': '/usr/local/airflow/include/dbt', 'debug': 'False', 'introspect': 'True', 'log_format': 'default', 'printer_width': '80', 'fail_fast': 'False', 'write_json': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'target_path': 'None', 'static_parser': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'no_print': 'None'}
+[0m11:34:58.075418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '890c77a5-d1dc-47bc-b9f6-002b242a5fca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf3ab620>]}
+[0m11:34:58.082581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '890c77a5-d1dc-47bc-b9f6-002b242a5fca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf112750>]}
+[0m11:34:58.083064 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:34:58.089238 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:34:58.089867 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:34:58.090106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '890c77a5-d1dc-47bc-b9f6-002b242a5fca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb1294e00>]}
+[0m11:34:58.400192 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.retail
+[0m11:34:58.402979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '890c77a5-d1dc-47bc-b9f6-002b242a5fca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaee328a0>]}
+[0m11:34:58.406137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '890c77a5-d1dc-47bc-b9f6-002b242a5fca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaee30e30>]}
+[0m11:34:58.406376 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:34:58.406616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '890c77a5-d1dc-47bc-b9f6-002b242a5fca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaee33290>]}
+[0m11:34:58.407275 [info ] [MainThread]: 
+[0m11:34:58.407524 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:34:58.407951 [debug] [MainThread]: Command end result
+[0m11:34:58.410792 [debug] [MainThread]: Command `dbt run` succeeded at 11:34:58.410717 after 0.52 seconds
+[0m11:34:58.410981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb15494f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb12a82f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf17c8f0>]}
+[0m11:34:58.411135 [debug] [MainThread]: Flushing usage events
+[0m11:35:24.966607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86c6be00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86d5e420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff86d5db50>]}
+
+
+============================== 11:35:24.968306 | 75dcd503-2859-46a7-9e17-5816be54c7a9 ==============================
+[0m11:35:24.968306 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:35:24.968671 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'log_format': 'default', 'no_print': 'None', 'static_parser': 'True', 'quiet': 'False', 'debug': 'False', 'printer_width': '80', 'write_json': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'indirect_selection': 'eager', 'version_check': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'partial_parse': 'True', 'warn_error': 'None'}
+[0m11:35:25.195138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '75dcd503-2859-46a7-9e17-5816be54c7a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84b4b500>]}
+[0m11:35:25.202668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '75dcd503-2859-46a7-9e17-5816be54c7a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84b1e510>]}
+[0m11:35:25.203032 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:35:25.208273 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:35:25.222916 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m11:35:25.223192 [debug] [MainThread]: Partial parsing: added file: music://models/transform/top_artists.sql
+[0m11:35:25.237718 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:35:25.244215 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.music.top_artists' (models/transform/top_artists.sql) depends on a source named 'music.raw_music_streams' which was not found
+[0m11:35:25.245024 [debug] [MainThread]: Command `dbt run` failed at 11:35:25.244614 after 0.28 seconds
+[0m11:35:25.245359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87119970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84df55b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84877b60>]}
+[0m11:35:25.245642 [debug] [MainThread]: Flushing usage events
+[0m11:37:28.900364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3c3f770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3fbbfb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3d6eb70>]}
+
+
+============================== 11:37:28.902471 | a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed ==============================
+[0m11:37:28.902471 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:37:28.902926 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_format': 'default', 'static_parser': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False', 'version_check': 'True', 'quiet': 'False', 'log_path': '/usr/local/airflow/include/dbt/logs', 'log_cache_events': 'False', 'printer_width': '80', 'warn_error': 'None', 'indirect_selection': 'eager', 'profiles_dir': '/usr/local/airflow/include/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'partial_parse': 'True'}
+[0m11:37:29.118062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1c3c350>]}
+[0m11:37:29.125484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa25d06b0>]}
+[0m11:37:29.125930 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:37:29.132554 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:37:29.162392 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m11:37:29.162799 [debug] [MainThread]: Partial parsing: added file: music://models/transform/top_artists.sql
+[0m11:37:29.163067 [debug] [MainThread]: Partial parsing: updated file: music://models/sources/sources.yml
+[0m11:37:29.174002 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:37:29.190199 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.retail
+[0m11:37:29.192664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1b16480>]}
+[0m11:37:29.196026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa198e120>]}
+[0m11:37:29.196230 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:37:29.196423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa198e000>]}
+[0m11:37:29.197231 [info ] [MainThread]: 
+[0m11:37:29.197799 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:37:29.198490 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:37:29.198719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:37:29.746274 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709_music'
+[0m11:37:29.746852 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:37:30.134059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a36ed0>]}
+[0m11:37:30.134982 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:37:30.135453 [info ] [MainThread]: 
+[0m11:37:30.143891 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:37:30.144570 [info ] [Thread-1 (]: 1 of 1 START sql view model music.top_artists .................................. [RUN]
+[0m11:37:30.145174 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:37:30.145462 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:37:30.150239 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:37:30.153007 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:37:30.145652 => 11:37:30.152834
+[0m11:37:30.153258 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:37:30.206691 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:37:30.210056 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:37:30.210972 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+
+  create or replace view `de-project-2025-455709`.`music`.`top_artists`
+  OPTIONS()
+  as -- models/top_artists.sql
+
+SELECT
+    "Artist",
+    COUNT(DISTINCT "Song") AS total_songs,
+    SUM("Streams") AS total_streams,
+    ROUND(AVG("Peak Position"), 2) AS avg_peak_position,
+    SUM("Weeks on Chart") AS total_weeks,
+    ROUND(AVG("TikTok Virality"), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY "Artist"
+ORDER BY total_streams DESC;
+
+
+[0m11:37:31.158336 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('No matching signature for aggregate function SUM\n  Argument types: STRING\n  Signature: SUM(INT64)\n    Argument 1: Unable to coerce type STRING to expected type INT64\n  Signature: SUM(FLOAT64)\n    Argument 1: Unable to coerce type STRING to expected type FLOAT64\n  Signature: SUM(NUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type NUMERIC\n  Signature: SUM(BIGNUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC\n  Signature: SUM(INTERVAL)\n    Argument 1: Unable to coerce type STRING to expected type INTERVAL at [11:5]; reason: invalidQuery, location: query, message: No matching signature for aggregate function SUM\n  Argument types: STRING\n  Signature: SUM(INT64)\n    Argument 1: Unable to coerce type STRING to expected type INT64\n  Signature: SUM(FLOAT64)\n    Argument 1: Unable to coerce type STRING to expected type FLOAT64\n  Signature: SUM(NUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type NUMERIC\n  Signature: SUM(BIGNUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC\n  Signature: SUM(INTERVAL)\n    Argument 1: Unable to coerce type STRING to expected type INTERVAL at [11:5]')
+[0m11:37:32.590168 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:a4ce3658-d700-41ed-9a87-598c8699745d&page=queryresults
+[0m11:37:32.593916 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:37:30.153430 => 11:37:32.593453
+[0m11:37:32.614333 [debug] [Thread-1 (]: Database Error in model top_artists (models/transform/top_artists.sql)
+  No matching signature for aggregate function SUM
+    Argument types: STRING
+    Signature: SUM(INT64)
+      Argument 1: Unable to coerce type STRING to expected type INT64
+    Signature: SUM(FLOAT64)
+      Argument 1: Unable to coerce type STRING to expected type FLOAT64
+    Signature: SUM(NUMERIC)
+      Argument 1: Unable to coerce type STRING to expected type NUMERIC
+    Signature: SUM(BIGNUMERIC)
+      Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC
+    Signature: SUM(INTERVAL)
+      Argument 1: Unable to coerce type STRING to expected type INTERVAL at [11:5]
+  compiled Code at target/run/music/models/transform/top_artists.sql
+[0m11:37:32.614874 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a76f05cc-b6c8-46f0-a8ac-ebbc2dea02ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa245ede0>]}
+[0m11:37:32.615672 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model music.top_artists ......................... [[31mERROR[0m in 2.47s]
+[0m11:37:32.616146 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:37:32.617850 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:37:32.618205 [debug] [MainThread]: Connection 'list_de-project-2025-455709' was properly closed.
+[0m11:37:32.618415 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:37:32.618654 [info ] [MainThread]: 
+[0m11:37:32.619035 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.42 seconds (3.42s).
+[0m11:37:32.619741 [debug] [MainThread]: Command end result
+[0m11:37:32.625764 [info ] [MainThread]: 
+[0m11:37:32.626259 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m11:37:32.626747 [info ] [MainThread]: 
+[0m11:37:32.627316 [error] [MainThread]: [33mDatabase Error in model top_artists (models/transform/top_artists.sql)[0m
+[0m11:37:32.627700 [error] [MainThread]:   No matching signature for aggregate function SUM
+[0m11:37:32.628008 [error] [MainThread]:     Argument types: STRING
+[0m11:37:32.628367 [error] [MainThread]:     Signature: SUM(INT64)
+[0m11:37:32.628620 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type INT64
+[0m11:37:32.628969 [error] [MainThread]:     Signature: SUM(FLOAT64)
+[0m11:37:32.629356 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type FLOAT64
+[0m11:37:32.629596 [error] [MainThread]:     Signature: SUM(NUMERIC)
+[0m11:37:32.629818 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type NUMERIC
+[0m11:37:32.630146 [error] [MainThread]:     Signature: SUM(BIGNUMERIC)
+[0m11:37:32.630419 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC
+[0m11:37:32.630701 [error] [MainThread]:     Signature: SUM(INTERVAL)
+[0m11:37:32.631053 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type INTERVAL at [11:5]
+[0m11:37:32.631335 [error] [MainThread]:   compiled Code at target/run/music/models/transform/top_artists.sql
+[0m11:37:32.631629 [info ] [MainThread]: 
+[0m11:37:32.632189 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m11:37:32.632907 [debug] [MainThread]: Command `dbt run` failed at 11:37:32.632751 after 3.74 seconds
+[0m11:37:32.633192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3fef530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1d791c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa245ede0>]}
+[0m11:37:32.633436 [debug] [MainThread]: Flushing usage events
+[0m11:43:05.750939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb63dbe00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb68854f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6fc6570>]}
+
+
+============================== 11:43:05.752383 | 7823093c-d699-4084-9183-3f1609e24e23 ==============================
+[0m11:43:05.752383 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:43:05.752845 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'use_colors': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'version_check': 'True', 'no_print': 'None', 'quiet': 'False', 'log_path': '/usr/local/airflow/include/dbt/logs', 'debug': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'introspect': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt', 'log_format': 'default', 'static_parser': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_cache_events': 'False'}
+[0m11:43:05.966221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb42ef6b0>]}
+[0m11:43:05.973425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb42ef7d0>]}
+[0m11:43:05.973804 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:43:05.978984 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:43:05.993105 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:43:05.993464 [debug] [MainThread]: Partial parsing: updated file: music://models/transform/top_artists.sql
+[0m11:43:06.003911 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:43:06.013414 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.retail
+[0m11:43:06.015767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4068c20>]}
+[0m11:43:06.020127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb41a0a40>]}
+[0m11:43:06.020378 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:43:06.020593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb41a0800>]}
+[0m11:43:06.021279 [info ] [MainThread]: 
+[0m11:43:06.021713 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:43:06.022378 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:43:06.022637 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:43:06.678813 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m11:43:06.679949 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:43:07.113626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb41a1cd0>]}
+[0m11:43:07.115381 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:43:07.116054 [info ] [MainThread]: 
+[0m11:43:07.122523 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:43:07.123356 [info ] [Thread-1 (]: 1 of 1 START sql view model music.top_artists .................................. [RUN]
+[0m11:43:07.124430 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:43:07.124923 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:43:07.132224 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:43:07.134587 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:43:07.125269 => 11:43:07.134348
+[0m11:43:07.134968 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:43:07.158270 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:43:07.160859 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:43:07.162115 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+
+  create or replace view `de-project-2025-455709`.`music`.`top_artists`
+  OPTIONS()
+  as -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG("Peak Position"), 2) AS avg_peak_position,
+    SUM("Weeks on Chart") AS total_weeks,
+    ROUND(AVG("TikTok Virality"), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC;
+
+
+[0m11:43:08.222102 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('GET https://bigquery.googleapis.com/bigquery/v2/projects/de-project-2025-455709/queries/16774be0-921c-4022-9dc0-c59101862b43?maxResults=0&location=US&prettyPrint=false: No matching signature for aggregate function AVG\n  Argument types: STRING\n  Signature: AVG(INT64)\n    Argument 1: Unable to coerce type STRING to expected type INT64\n  Signature: AVG(FLOAT64)\n    Argument 1: Unable to coerce type STRING to expected type FLOAT64\n  Signature: AVG(NUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type NUMERIC\n  Signature: AVG(BIGNUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC\n  Signature: AVG(INTERVAL)\n    Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]')
+[0m11:43:09.611296 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:9729285f-07e5-46a9-9831-e2de1dac3b3c&page=queryresults
+[0m11:43:09.612170 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:43:07.135216 => 11:43:09.611998
+[0m11:43:09.621389 [debug] [Thread-1 (]: Database Error in model top_artists (models/transform/top_artists.sql)
+  No matching signature for aggregate function AVG
+    Argument types: STRING
+    Signature: AVG(INT64)
+      Argument 1: Unable to coerce type STRING to expected type INT64
+    Signature: AVG(FLOAT64)
+      Argument 1: Unable to coerce type STRING to expected type FLOAT64
+    Signature: AVG(NUMERIC)
+      Argument 1: Unable to coerce type STRING to expected type NUMERIC
+    Signature: AVG(BIGNUMERIC)
+      Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC
+    Signature: AVG(INTERVAL)
+      Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]
+  compiled Code at target/run/music/models/transform/top_artists.sql
+[0m11:43:09.622023 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7823093c-d699-4084-9183-3f1609e24e23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4157b90>]}
+[0m11:43:09.622569 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model music.top_artists ......................... [[31mERROR[0m in 2.50s]
+[0m11:43:09.622978 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:43:09.624558 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:43:09.624746 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:43:09.624924 [info ] [MainThread]: 
+[0m11:43:09.625200 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.60 seconds (3.60s).
+[0m11:43:09.625671 [debug] [MainThread]: Command end result
+[0m11:43:09.630807 [info ] [MainThread]: 
+[0m11:43:09.631128 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m11:43:09.631406 [info ] [MainThread]: 
+[0m11:43:09.631703 [error] [MainThread]: [33mDatabase Error in model top_artists (models/transform/top_artists.sql)[0m
+[0m11:43:09.631938 [error] [MainThread]:   No matching signature for aggregate function AVG
+[0m11:43:09.632169 [error] [MainThread]:     Argument types: STRING
+[0m11:43:09.632413 [error] [MainThread]:     Signature: AVG(INT64)
+[0m11:43:09.632648 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type INT64
+[0m11:43:09.632869 [error] [MainThread]:     Signature: AVG(FLOAT64)
+[0m11:43:09.633096 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type FLOAT64
+[0m11:43:09.633301 [error] [MainThread]:     Signature: AVG(NUMERIC)
+[0m11:43:09.633644 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type NUMERIC
+[0m11:43:09.633986 [error] [MainThread]:     Signature: AVG(BIGNUMERIC)
+[0m11:43:09.634206 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC
+[0m11:43:09.634433 [error] [MainThread]:     Signature: AVG(INTERVAL)
+[0m11:43:09.634661 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]
+[0m11:43:09.634874 [error] [MainThread]:   compiled Code at target/run/music/models/transform/top_artists.sql
+[0m11:43:09.635064 [info ] [MainThread]: 
+[0m11:43:09.635361 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m11:43:09.635809 [debug] [MainThread]: Command `dbt run` failed at 11:43:09.635692 after 3.89 seconds
+[0m11:43:09.636106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb70976b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb633ade0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb52f0170>]}
+[0m11:43:09.636392 [debug] [MainThread]: Flushing usage events
+[0m11:43:34.961516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7fb3f650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7fb3f050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7fb3ffe0>]}
+
+
+============================== 11:43:34.962532 | d07cb5e2-09e7-4f14-bb7c-0e13610ea8f8 ==============================
+[0m11:43:34.962532 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:43:34.962881 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'version_check': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'introspect': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'fail_fast': 'False', 'debug': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'target_path': 'None', 'static_parser': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt', 'printer_width': '80', 'partial_parse': 'True', 'no_print': 'None', 'quiet': 'False'}
+[0m11:43:35.223899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7da53e30>]}
+[0m11:43:35.231585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e392ba0>]}
+[0m11:43:35.232164 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:43:35.238209 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:43:35.252569 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:43:35.252904 [debug] [MainThread]: Partial parsing: updated file: music://models/transform/top_artists.sql
+[0m11:43:35.263248 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:43:35.271511 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.retail
+[0m11:43:35.273817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d854d70>]}
+[0m11:43:35.277115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d868230>]}
+[0m11:43:35.277448 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:43:35.277718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d8681d0>]}
+[0m11:43:35.278613 [info ] [MainThread]: 
+[0m11:43:35.279133 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:43:35.279767 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:43:35.279974 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:43:35.681940 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m11:43:35.683407 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:43:36.099168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7d868710>]}
+[0m11:43:36.101577 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:43:36.103070 [info ] [MainThread]: 
+[0m11:43:36.163836 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:43:36.164996 [info ] [Thread-1 (]: 1 of 1 START sql view model music.top_artists .................................. [RUN]
+[0m11:43:36.166516 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:43:36.167094 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:43:36.177566 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:43:36.179793 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:43:36.167485 => 11:43:36.179607
+[0m11:43:36.180088 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:43:36.199630 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:43:36.200994 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:43:36.202205 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+
+  create or replace view `de-project-2025-455709`.`music`.`top_artists`
+  OPTIONS()
+  as -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG('Peak Position'), 2) AS avg_peak_position,
+    SUM('Weeks on Chart') AS total_weeks,
+    ROUND(AVG('TikTok Virality'), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC;
+
+
+[0m11:43:36.945838 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('No matching signature for aggregate function AVG\n  Argument types: STRING\n  Signature: AVG(INT64)\n    Argument 1: Unable to coerce type STRING to expected type INT64\n  Signature: AVG(FLOAT64)\n    Argument 1: Unable to coerce type STRING to expected type FLOAT64\n  Signature: AVG(NUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type NUMERIC\n  Signature: AVG(BIGNUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC\n  Signature: AVG(INTERVAL)\n    Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]; reason: invalidQuery, location: query, message: No matching signature for aggregate function AVG\n  Argument types: STRING\n  Signature: AVG(INT64)\n    Argument 1: Unable to coerce type STRING to expected type INT64\n  Signature: AVG(FLOAT64)\n    Argument 1: Unable to coerce type STRING to expected type FLOAT64\n  Signature: AVG(NUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type NUMERIC\n  Signature: AVG(BIGNUMERIC)\n    Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC\n  Signature: AVG(INTERVAL)\n    Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]')
+[0m11:43:38.450214 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:997ef046-aecf-404b-a052-0aef676ca203&page=queryresults
+[0m11:43:38.455366 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:43:36.180412 => 11:43:38.453068
+[0m11:43:38.470085 [debug] [Thread-1 (]: Database Error in model top_artists (models/transform/top_artists.sql)
+  No matching signature for aggregate function AVG
+    Argument types: STRING
+    Signature: AVG(INT64)
+      Argument 1: Unable to coerce type STRING to expected type INT64
+    Signature: AVG(FLOAT64)
+      Argument 1: Unable to coerce type STRING to expected type FLOAT64
+    Signature: AVG(NUMERIC)
+      Argument 1: Unable to coerce type STRING to expected type NUMERIC
+    Signature: AVG(BIGNUMERIC)
+      Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC
+    Signature: AVG(INTERVAL)
+      Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]
+  compiled Code at target/run/music/models/transform/top_artists.sql
+[0m11:43:38.471742 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd07cb5e2-09e7-4f14-bb7c-0e13610ea8f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7da14b30>]}
+[0m11:43:38.473838 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model music.top_artists ......................... [[31mERROR[0m in 2.31s]
+[0m11:43:38.475450 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:43:38.479627 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:43:38.480114 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:43:38.480644 [info ] [MainThread]: 
+[0m11:43:38.481321 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.20 seconds (3.20s).
+[0m11:43:38.482942 [debug] [MainThread]: Command end result
+[0m11:43:38.495358 [info ] [MainThread]: 
+[0m11:43:38.496017 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m11:43:38.496505 [info ] [MainThread]: 
+[0m11:43:38.496885 [error] [MainThread]: [33mDatabase Error in model top_artists (models/transform/top_artists.sql)[0m
+[0m11:43:38.497157 [error] [MainThread]:   No matching signature for aggregate function AVG
+[0m11:43:38.497413 [error] [MainThread]:     Argument types: STRING
+[0m11:43:38.497730 [error] [MainThread]:     Signature: AVG(INT64)
+[0m11:43:38.497999 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type INT64
+[0m11:43:38.498459 [error] [MainThread]:     Signature: AVG(FLOAT64)
+[0m11:43:38.498760 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type FLOAT64
+[0m11:43:38.499056 [error] [MainThread]:     Signature: AVG(NUMERIC)
+[0m11:43:38.499403 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type NUMERIC
+[0m11:43:38.500118 [error] [MainThread]:     Signature: AVG(BIGNUMERIC)
+[0m11:43:38.500870 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type BIGNUMERIC
+[0m11:43:38.501237 [error] [MainThread]:     Signature: AVG(INTERVAL)
+[0m11:43:38.501593 [error] [MainThread]:       Argument 1: Unable to coerce type STRING to expected type INTERVAL at [12:11]
+[0m11:43:38.501949 [error] [MainThread]:   compiled Code at target/run/music/models/transform/top_artists.sql
+[0m11:43:38.502380 [info ] [MainThread]: 
+[0m11:43:38.503100 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m11:43:38.504068 [debug] [MainThread]: Command `dbt run` failed at 11:43:38.503809 after 3.55 seconds
+[0m11:43:38.505341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7dcffce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7dadb410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e367110>]}
+[0m11:43:38.505940 [debug] [MainThread]: Flushing usage events
+[0m11:45:51.813648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ecaa750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ed9bad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ecab0e0>]}
+
+
+============================== 11:45:51.814964 | 24db1e05-1adc-4a89-a0db-a0ee5c5fd743 ==============================
+[0m11:45:51.814964 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:45:51.815448 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'printer_width': '80', 'profiles_dir': '/usr/local/airflow/include/dbt', 'warn_error': 'None', 'no_print': 'None', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'quiet': 'False', 'introspect': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'debug': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'version_check': 'True', 'fail_fast': 'False', 'write_json': 'True', 'log_cache_events': 'False'}
+[0m11:45:52.077063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cc0b170>]}
+[0m11:45:52.084401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ccd92b0>]}
+[0m11:45:52.084849 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:45:52.089893 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:45:52.103486 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:45:52.103806 [debug] [MainThread]: Partial parsing: updated file: music://models/transform/top_artists.sql
+[0m11:45:52.114595 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:45:52.124320 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.retail
+[0m11:45:52.126663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cb1d7f0>]}
+[0m11:45:52.130639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c995070>]}
+[0m11:45:52.130837 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:45:52.131034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cc0a180>]}
+[0m11:45:52.131809 [info ] [MainThread]: 
+[0m11:45:52.132289 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:45:52.132949 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:45:52.133160 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:45:52.696918 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m11:45:52.697853 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:45:53.089057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cca0680>]}
+[0m11:45:53.091069 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:45:53.092070 [info ] [MainThread]: 
+[0m11:45:53.099993 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:45:53.100722 [info ] [Thread-1 (]: 1 of 1 START sql view model music.top_artists .................................. [RUN]
+[0m11:45:53.101863 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:45:53.102405 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:45:53.110655 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:45:53.113310 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:45:53.102715 => 11:45:53.113035
+[0m11:45:53.113832 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:45:53.143904 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:45:53.145282 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:45:53.146433 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+
+  create or replace view `de-project-2025-455709`.`music`.`top_artists`
+  OPTIONS()
+  as -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC;
+
+
+[0m11:45:54.192375 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:bfec1931-1353-4833-874e-1f3aecf2241d&page=queryresults
+[0m11:45:54.210795 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:45:53.114165 => 11:45:54.210597
+[0m11:45:54.211744 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '24db1e05-1adc-4a89-a0db-a0ee5c5fd743', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cdf6390>]}
+[0m11:45:54.212446 [info ] [Thread-1 (]: 1 of 1 OK created sql view model music.top_artists ............................. [[32mCREATE VIEW (0 processed)[0m in 1.11s]
+[0m11:45:54.213484 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:45:54.215347 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:45:54.215618 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:45:54.215904 [info ] [MainThread]: 
+[0m11:45:54.216264 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.08 seconds (2.08s).
+[0m11:45:54.217137 [debug] [MainThread]: Command end result
+[0m11:45:54.224360 [info ] [MainThread]: 
+[0m11:45:54.224687 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:45:54.225046 [info ] [MainThread]: 
+[0m11:45:54.225460 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:45:54.225906 [debug] [MainThread]: Command `dbt run` succeeded at 11:45:54.225813 after 2.42 seconds
+[0m11:45:54.226199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ef23da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c956780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cda52e0>]}
+[0m11:45:54.226462 [debug] [MainThread]: Flushing usage events
+[0m11:47:01.192780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa34aa750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3b9d340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3858d10>]}
+
+
+============================== 11:47:01.194213 | 9e4516c7-a01c-4007-84ab-2c76cf01b9fb ==============================
+[0m11:47:01.194213 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:47:01.194566 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'write_json': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'quiet': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'introspect': 'True', 'printer_width': '80', 'profiles_dir': '/usr/local/airflow/include/dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:47:01.397464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa157a4b0>]}
+[0m11:47:01.404562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1578a70>]}
+[0m11:47:01.404925 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:47:01.409957 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:47:01.414852 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:47:01.415240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa13ad2e0>]}
+[0m11:47:01.710880 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:47:01.741386 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.transform
+[0m11:47:01.743915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa11e4d40>]}
+[0m11:47:01.747889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa11e4500>]}
+[0m11:47:01.748145 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:47:01.748382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa117e4b0>]}
+[0m11:47:01.749201 [info ] [MainThread]: 
+[0m11:47:01.749704 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:47:01.750332 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:47:01.750550 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:47:02.182977 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m11:47:02.183744 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:47:02.634781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa11e7bf0>]}
+[0m11:47:02.636852 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:47:02.637726 [info ] [MainThread]: 
+[0m11:47:02.644444 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:47:02.645422 [info ] [Thread-1 (]: 1 of 1 START sql view model music.top_artists .................................. [RUN]
+[0m11:47:02.646838 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:47:02.647622 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:47:02.656014 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:47:02.659008 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:47:02.648049 => 11:47:02.658709
+[0m11:47:02.659501 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:47:02.682604 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:47:02.683740 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:47:02.685032 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+
+  create or replace view `de-project-2025-455709`.`music`.`top_artists`
+  OPTIONS()
+  as -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC;
+
+
+[0m11:47:03.720575 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:cb4d4251-05a2-4821-9fdf-7af1694e9400&page=queryresults
+[0m11:47:03.736342 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:47:02.659796 => 11:47:03.736151
+[0m11:47:03.737303 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9e4516c7-a01c-4007-84ab-2c76cf01b9fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa137fe60>]}
+[0m11:47:03.738098 [info ] [Thread-1 (]: 1 of 1 OK created sql view model music.top_artists ............................. [[32mCREATE VIEW (0 processed)[0m in 1.09s]
+[0m11:47:03.739320 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:47:03.741682 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:47:03.742215 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:47:03.742677 [info ] [MainThread]: 
+[0m11:47:03.743145 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.99 seconds (1.99s).
+[0m11:47:03.743982 [debug] [MainThread]: Command end result
+[0m11:47:03.753140 [info ] [MainThread]: 
+[0m11:47:03.753551 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:47:03.753863 [info ] [MainThread]: 
+[0m11:47:03.754423 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:47:03.755136 [debug] [MainThread]: Command `dbt run` succeeded at 11:47:03.754992 after 2.57 seconds
+[0m11:47:03.755503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa4403c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa22538f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3c3a6f0>]}
+[0m11:47:03.755835 [debug] [MainThread]: Flushing usage events
+[0m11:53:56.531968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9540a750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff95780aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff956eb080>]}
+
+
+============================== 11:53:56.533261 | de5879b5-f5ac-4967-bd7e-35973aef07b6 ==============================
+[0m11:53:56.533261 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:53:56.533748 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'no_print': 'None', 'quiet': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'version_check': 'True', 'write_json': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'printer_width': '80', 'debug': 'False', 'target_path': 'None', 'fail_fast': 'False', 'profiles_dir': '/usr/local/airflow/include/dbt', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:53:56.747885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9355f590>]}
+[0m11:53:56.754690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff95430470>]}
+[0m11:53:56.755048 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:53:56.760783 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:53:56.766411 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:53:56.766687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9331a900>]}
+[0m11:53:57.052656 [debug] [MainThread]: 1699: static parser successfully parsed transform/top_artists.sql
+[0m11:53:57.084716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff932723c0>]}
+[0m11:53:57.088572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff932709b0>]}
+[0m11:53:57.088790 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:53:57.089001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93183ec0>]}
+[0m11:53:57.089798 [info ] [MainThread]: 
+[0m11:53:57.090252 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:53:57.090822 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:53:57.091047 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:57.761379 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m11:53:57.762516 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:53:58.142865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff931e1d00>]}
+[0m11:53:58.144927 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:53:58.145912 [info ] [MainThread]: 
+[0m11:53:58.153569 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:53:58.154754 [info ] [Thread-1 (]: 1 of 1 START sql table model music.top_artists ................................. [RUN]
+[0m11:53:58.155961 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:53:58.156449 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:53:58.163796 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:53:58.165752 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:53:58.156845 => 11:53:58.165462
+[0m11:53:58.166170 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:53:58.178813 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:58.765265 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:53:58.768069 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`top_artists`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC
+    );
+  
+[0m11:54:01.548237 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:d66d4716-ebd6-43ca-b588-f080b155ba17&page=queryresults
+[0m11:54:01.568607 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:53:58.166428 => 11:54:01.568401
+[0m11:54:01.569596 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de5879b5-f5ac-4967-bd7e-35973aef07b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93186c00>]}
+[0m11:54:01.570270 [info ] [Thread-1 (]: 1 of 1 OK created sql table model music.top_artists ............................ [[32mCREATE TABLE (20.0 rows, 281.5 KiB processed)[0m in 3.41s]
+[0m11:54:01.571067 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:54:01.573274 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:54:01.573646 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:54:01.573938 [info ] [MainThread]: 
+[0m11:54:01.574305 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.48 seconds (4.48s).
+[0m11:54:01.575195 [debug] [MainThread]: Command end result
+[0m11:54:01.584218 [info ] [MainThread]: 
+[0m11:54:01.584617 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:54:01.584932 [info ] [MainThread]: 
+[0m11:54:01.585307 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:54:01.585726 [debug] [MainThread]: Command `dbt run` succeeded at 11:54:01.585650 after 5.06 seconds
+[0m11:54:01.586023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff956eb3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff95b5a7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff963081d0>]}
+[0m11:54:01.586267 [debug] [MainThread]: Flushing usage events
+[0m11:54:20.635725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb563ffe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb563e3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb563f9e0>]}
+
+
+============================== 11:54:20.636985 | 5e7447c6-6af7-46e1-8939-d53af5426137 ==============================
+[0m11:54:20.636985 [info ] [MainThread]: Running with dbt=1.5.11
+[0m11:54:20.637364 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'use_experimental_parser': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'fail_fast': 'False', 'version_check': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'quiet': 'False', 'profiles_dir': '/usr/local/airflow/include/dbt', 'partial_parse': 'True', 'use_colors': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'printer_width': '80', 'log_cache_events': 'False'}
+[0m11:54:20.861926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb34f35f0>]}
+[0m11:54:20.868736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb36dcfb0>]}
+[0m11:54:20.869078 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m11:54:20.873736 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m11:54:20.888008 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:54:20.888185 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:54:20.890647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb34f34d0>]}
+[0m11:54:20.894649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb338e3f0>]}
+[0m11:54:20.894874 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m11:54:20.895117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb36df9e0>]}
+[0m11:54:20.895808 [info ] [MainThread]: 
+[0m11:54:20.896213 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:54:20.896815 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m11:54:20.897014 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:54:21.311749 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m11:54:21.312623 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:54:21.670067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb3478740>]}
+[0m11:54:21.671228 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:54:21.671805 [info ] [MainThread]: 
+[0m11:54:21.677716 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m11:54:21.678477 [info ] [Thread-1 (]: 1 of 1 START sql table model music.top_artists ................................. [RUN]
+[0m11:54:21.679594 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.top_artists)
+[0m11:54:21.680122 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m11:54:21.687925 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m11:54:21.689368 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 11:54:21.680519 => 11:54:21.689231
+[0m11:54:21.689656 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m11:54:21.719022 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m11:54:21.720485 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:54:21.721667 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`top_artists`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC
+    );
+  
+[0m11:54:24.995141 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:e75e40ca-11dd-4485-8b3d-5c958fe47aaf&page=queryresults
+[0m11:54:25.007587 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 11:54:21.690160 => 11:54:25.007460
+[0m11:54:25.008236 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5e7447c6-6af7-46e1-8939-d53af5426137', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb40bed20>]}
+[0m11:54:25.008840 [info ] [Thread-1 (]: 1 of 1 OK created sql table model music.top_artists ............................ [[32mCREATE TABLE (20.0 rows, 281.5 KiB processed)[0m in 3.33s]
+[0m11:54:25.009572 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m11:54:25.011135 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:54:25.011410 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m11:54:25.011685 [info ] [MainThread]: 
+[0m11:54:25.011988 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.12 seconds (4.12s).
+[0m11:54:25.012630 [debug] [MainThread]: Command end result
+[0m11:54:25.018179 [info ] [MainThread]: 
+[0m11:54:25.018523 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:54:25.018842 [info ] [MainThread]: 
+[0m11:54:25.019287 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:54:25.019711 [debug] [MainThread]: Command `dbt run` succeeded at 11:54:25.019649 after 4.39 seconds
+[0m11:54:25.019966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5733fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb35536e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb401d5b0>]}
+[0m11:54:25.020204 [debug] [MainThread]: Flushing usage events
+[0m12:41:24.813613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fb3ffe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fe2bad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fc3a0f0>]}
+
+
+============================== 12:41:24.815204 | d48979f5-e963-4c84-a57a-183c4a267051 ==============================
+[0m12:41:24.815204 [info ] [MainThread]: Running with dbt=1.5.11
+[0m12:41:24.815538 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'write_json': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'log_format': 'default', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'introspect': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt', 'no_print': 'None', 'printer_width': '80', 'log_cache_events': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'version_check': 'True', 'static_parser': 'True', 'quiet': 'False', 'cache_selected_only': 'False'}
+[0m12:41:25.090039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd48979f5-e963-4c84-a57a-183c4a267051', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fb69040>]}
+[0m12:41:25.096797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd48979f5-e963-4c84-a57a-183c4a267051', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9da16510>]}
+[0m12:41:25.097123 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m12:41:25.102278 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m12:41:25.117126 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m12:41:25.117349 [debug] [MainThread]: Partial parsing: added file: music://models/transform/genre_trends.sql
+[0m12:41:25.128324 [debug] [MainThread]: 1699: static parser successfully parsed transform/genre_trends.sql
+[0m12:41:25.133669 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.music.genre_trends' (models/transform/genre_trends.sql) depends on a node named 'your_source_table' which was not found
+[0m12:41:25.134257 [debug] [MainThread]: Command `dbt run` failed at 12:41:25.133913 after 0.33 seconds
+[0m12:41:25.134453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9febb890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d76b920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9e2851f0>]}
+[0m12:41:25.134612 [debug] [MainThread]: Flushing usage events
+[0m12:41:48.695700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e69e210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e9248c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e5ab9e0>]}
+
+
+============================== 12:41:48.697099 | 6a26a0bf-efa1-4bb1-bcd3-464de238bed4 ==============================
+[0m12:41:48.697099 [info ] [MainThread]: Running with dbt=1.5.11
+[0m12:41:48.697526 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'partial_parse': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'quiet': 'False', 'printer_width': '80', 'use_colors': 'True', 'warn_error': 'None', 'log_path': '/usr/local/airflow/include/dbt/logs', 'log_format': 'default', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'no_print': 'None', 'write_json': 'True', 'static_parser': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'log_cache_events': 'False'}
+[0m12:41:48.921066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c7a78f0>]}
+[0m12:41:48.928150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c4da810>]}
+[0m12:41:48.928523 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m12:41:48.933576 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m12:41:48.948807 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m12:41:48.949098 [debug] [MainThread]: Partial parsing: added file: music://models/transform/genre_trends.sql
+[0m12:41:48.959354 [debug] [MainThread]: 1699: static parser successfully parsed transform/genre_trends.sql
+[0m12:41:48.971293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c57c530>]}
+[0m12:41:48.975425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c3a02c0>]}
+[0m12:41:48.975679 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m12:41:48.975902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c643050>]}
+[0m12:41:48.976662 [info ] [MainThread]: 
+[0m12:41:48.977093 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:41:48.977700 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m12:41:48.977890 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:41:49.602493 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709_music'
+[0m12:41:49.603283 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:41:49.987105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c641220>]}
+[0m12:41:49.987865 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:41:49.988354 [info ] [MainThread]: 
+[0m12:41:49.993933 [debug] [Thread-1 (]: Began running node model.music.genre_trends
+[0m12:41:49.994457 [info ] [Thread-1 (]: 1 of 2 START sql table model music.genre_trends ................................ [RUN]
+[0m12:41:49.995443 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.genre_trends)
+[0m12:41:49.996064 [debug] [Thread-1 (]: Began compiling node model.music.genre_trends
+[0m12:41:50.002682 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.genre_trends"
+[0m12:41:50.004670 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (compile): 12:41:49.996371 => 12:41:50.004424
+[0m12:41:50.005078 [debug] [Thread-1 (]: Began executing node model.music.genre_trends
+[0m12:41:50.030612 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.genre_trends"
+[0m12:41:50.032886 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:41:50.033909 [debug] [Thread-1 (]: On model.music.genre_trends: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.genre_trends"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`genre_trends`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/genre_trends.sql
+
+SELECT
+    Genre,
+    `Release Year` AS release_year,
+    COUNT(*) AS total_songs,
+    SUM(`Streams`) AS total_streams,
+    ROUND(AVG(`Daily Streams`), 2) AS avg_daily_streams,
+    ROUND(AVG(`Energy`), 2) AS avg_energy
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Genre, `Release Year`
+ORDER BY release_year ASC, total_streams DESC
+    );
+  
+[0m12:41:52.911328 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:5974ab6d-3443-4de8-8380-110d3e0f1eaa&page=queryresults
+[0m12:41:52.931020 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (execute): 12:41:50.005358 => 12:41:52.930814
+[0m12:41:52.931985 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c2501a0>]}
+[0m12:41:52.932718 [info ] [Thread-1 (]: 1 of 2 OK created sql table model music.genre_trends ........................... [[32mCREATE TABLE (791.0 rows, 186.9 KiB processed)[0m in 2.94s]
+[0m12:41:52.933639 [debug] [Thread-1 (]: Finished running node model.music.genre_trends
+[0m12:41:52.934474 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m12:41:52.934995 [info ] [Thread-1 (]: 2 of 2 START sql table model music.top_artists ................................. [RUN]
+[0m12:41:52.935807 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.music.genre_trends, now model.music.top_artists)
+[0m12:41:52.936166 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m12:41:52.938438 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m12:41:52.940145 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 12:41:52.936383 => 12:41:52.939997
+[0m12:41:52.940440 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m12:41:52.943710 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:41:53.481994 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m12:41:53.483173 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`top_artists`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC
+    );
+  
+[0m12:41:56.283086 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:7068eb25-5f6e-4487-8854-72282a9983cc&page=queryresults
+[0m12:41:56.289790 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 12:41:52.940666 => 12:41:56.289638
+[0m12:41:56.290708 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6a26a0bf-efa1-4bb1-bcd3-464de238bed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c2444d0>]}
+[0m12:41:56.291353 [info ] [Thread-1 (]: 2 of 2 OK created sql table model music.top_artists ............................ [[32mCREATE TABLE (20.0 rows, 281.5 KiB processed)[0m in 3.36s]
+[0m12:41:56.292173 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m12:41:56.294190 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:41:56.294484 [debug] [MainThread]: Connection 'list_de-project-2025-455709' was properly closed.
+[0m12:41:56.294714 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m12:41:56.294989 [info ] [MainThread]: 
+[0m12:41:56.295319 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.32 seconds (7.32s).
+[0m12:41:56.296103 [debug] [MainThread]: Command end result
+[0m12:41:56.301025 [info ] [MainThread]: 
+[0m12:41:56.301331 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:41:56.301631 [info ] [MainThread]: 
+[0m12:41:56.302060 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:41:56.302577 [debug] [MainThread]: Command `dbt run` succeeded at 12:41:56.302481 after 7.61 seconds
+[0m12:41:56.302861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8fb19010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c9c27e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c6421b0>]}
+[0m12:41:56.303097 [debug] [MainThread]: Flushing usage events
+[0m12:46:18.557191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93d2eb40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93c545f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93b5bad0>]}
+
+
+============================== 12:46:18.558642 | e57bb1e6-5ca2-49b0-9594-c4596d2edae5 ==============================
+[0m12:46:18.558642 [info ] [MainThread]: Running with dbt=1.5.11
+[0m12:46:18.559186 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'no_print': 'None', 'target_path': 'None', 'profiles_dir': '/usr/local/airflow/include/dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'version_check': 'True', 'log_format': 'default', 'quiet': 'False', 'fail_fast': 'False', 'introspect': 'True', 'partial_parse': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs', 'indirect_selection': 'eager', 'static_parser': 'True', 'log_cache_events': 'False'}
+[0m12:46:18.810467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91a73590>]}
+[0m12:46:18.822051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9186f0b0>]}
+[0m12:46:18.823869 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m12:46:18.843174 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m12:46:18.868138 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:46:18.868553 [debug] [MainThread]: Partial parsing: updated file: music://models/transform/genre_trends.sql
+[0m12:46:18.879791 [debug] [MainThread]: 1699: static parser successfully parsed transform/genre_trends.sql
+[0m12:46:18.892067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9190bec0>]}
+[0m12:46:18.896669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9173aa20>]}
+[0m12:46:18.896882 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m12:46:18.897109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9173a7b0>]}
+[0m12:46:18.897916 [info ] [MainThread]: 
+[0m12:46:18.898492 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:46:18.899293 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m12:46:18.899554 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:46:19.474478 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709_music'
+[0m12:46:19.475494 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:46:19.903544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91a080b0>]}
+[0m12:46:19.905454 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:46:19.906207 [info ] [MainThread]: 
+[0m12:46:19.910765 [debug] [Thread-1 (]: Began running node model.music.genre_trends
+[0m12:46:19.911210 [info ] [Thread-1 (]: 1 of 2 START sql table model music.genre_trends ................................ [RUN]
+[0m12:46:19.911816 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.genre_trends)
+[0m12:46:19.912264 [debug] [Thread-1 (]: Began compiling node model.music.genre_trends
+[0m12:46:19.919537 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.genre_trends"
+[0m12:46:19.920810 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (compile): 12:46:19.912549 => 12:46:19.920678
+[0m12:46:19.921078 [debug] [Thread-1 (]: Began executing node model.music.genre_trends
+[0m12:46:19.933822 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:46:20.355461 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.genre_trends"
+[0m12:46:20.357414 [debug] [Thread-1 (]: On model.music.genre_trends: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.genre_trends"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`genre_trends`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/genre_trends.sql
+
+SELECT
+    Genre,
+    COUNT(*) AS total_songs,
+    SUM(`Streams`) AS total_streams,
+    ROUND(AVG(`Daily Streams`), 2) AS avg_daily_streams,
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Genre
+ORDER BY total_streams DESC
+    );
+  
+[0m12:46:23.660261 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:a00383dc-9da2-43a4-8240-4e9fcd09b13b&page=queryresults
+[0m12:46:23.681834 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (execute): 12:46:19.921263 => 12:46:23.681525
+[0m12:46:23.683086 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9180a180>]}
+[0m12:46:23.683889 [info ] [Thread-1 (]: 1 of 2 OK created sql table model music.genre_trends ........................... [[32mCREATE TABLE (22.0 rows, 111.2 KiB processed)[0m in 3.77s]
+[0m12:46:23.684633 [debug] [Thread-1 (]: Finished running node model.music.genre_trends
+[0m12:46:23.685205 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m12:46:23.685705 [info ] [Thread-1 (]: 2 of 2 START sql table model music.top_artists ................................. [RUN]
+[0m12:46:23.686357 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.music.genre_trends, now model.music.top_artists)
+[0m12:46:23.686677 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m12:46:23.691331 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m12:46:23.693174 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 12:46:23.686922 => 12:46:23.693035
+[0m12:46:23.693445 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m12:46:23.694844 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:46:24.126126 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m12:46:24.129497 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`top_artists`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC
+    );
+  
+[0m12:46:26.994375 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:1c307917-4713-42ae-9d4e-4a4a46303d9b&page=queryresults
+[0m12:46:26.999377 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 12:46:23.693679 => 12:46:26.999105
+[0m12:46:27.000724 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e57bb1e6-5ca2-49b0-9594-c4596d2edae5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff94958140>]}
+[0m12:46:27.001624 [info ] [Thread-1 (]: 2 of 2 OK created sql table model music.top_artists ............................ [[32mCREATE TABLE (20.0 rows, 281.5 KiB processed)[0m in 3.31s]
+[0m12:46:27.002392 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m12:46:27.006727 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:46:27.007153 [debug] [MainThread]: Connection 'list_de-project-2025-455709' was properly closed.
+[0m12:46:27.008021 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m12:46:27.010032 [info ] [MainThread]: 
+[0m12:46:27.012360 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 8.11 seconds (8.11s).
+[0m12:46:27.015923 [debug] [MainThread]: Command end result
+[0m12:46:27.026983 [info ] [MainThread]: 
+[0m12:46:27.027594 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:46:27.028183 [info ] [MainThread]: 
+[0m12:46:27.028802 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:46:27.029434 [debug] [MainThread]: Command `dbt run` succeeded at 12:46:27.029228 after 8.48 seconds
+[0m12:46:27.029861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97ec6ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9180a180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91b5bda0>]}
+[0m12:46:27.030164 [debug] [MainThread]: Flushing usage events
+[0m13:21:32.878538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa17ffe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaadb02f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa3c8c20>]}
+
+
+============================== 13:21:32.881224 | 797a6e8e-804e-4d30-9cb9-3e27b1114375 ==============================
+[0m13:21:32.881224 [info ] [MainThread]: Running with dbt=1.5.11
+[0m13:21:32.881727 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'use_experimental_parser': 'False', 'target_path': 'None', 'fail_fast': 'False', 'quiet': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'debug': 'False', 'static_parser': 'True', 'profiles_dir': '/usr/local/airflow/include/dbt', 'introspect': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'use_colors': 'True', 'write_json': 'True', 'no_print': 'None', 'partial_parse': 'True', 'log_path': '/usr/local/airflow/include/dbt/logs'}
+[0m13:21:33.137504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa17e480>]}
+[0m13:21:33.144857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8151670>]}
+[0m13:21:33.145253 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m13:21:33.150880 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m13:21:33.165879 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:21:33.166159 [debug] [MainThread]: Partial parsing: updated file: music://models/transform/genre_trends.sql
+[0m13:21:33.176366 [debug] [MainThread]: 1699: static parser successfully parsed transform/genre_trends.sql
+[0m13:21:33.189420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f0e390>]}
+[0m13:21:33.196311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f399d0>]}
+[0m13:21:33.196515 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m13:21:33.196729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f39970>]}
+[0m13:21:33.197491 [info ] [MainThread]: 
+[0m13:21:33.197931 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:21:33.198556 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m13:21:33.198993 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:33.801269 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m13:21:33.802292 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:21:34.229742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa837a7e0>]}
+[0m13:21:34.231004 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:21:34.231605 [info ] [MainThread]: 
+[0m13:21:34.237597 [debug] [Thread-1 (]: Began running node model.music.genre_trends
+[0m13:21:34.238136 [info ] [Thread-1 (]: 1 of 2 START sql table model music.genre_trends ................................ [RUN]
+[0m13:21:34.238721 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.genre_trends)
+[0m13:21:34.238998 [debug] [Thread-1 (]: Began compiling node model.music.genre_trends
+[0m13:21:34.243141 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.genre_trends"
+[0m13:21:34.244506 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (compile): 13:21:34.239226 => 13:21:34.244322
+[0m13:21:34.244757 [debug] [Thread-1 (]: Began executing node model.music.genre_trends
+[0m13:21:34.252899 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:21:34.629724 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.genre_trends"
+[0m13:21:34.631240 [debug] [Thread-1 (]: On model.music.genre_trends: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.genre_trends"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`genre_trends`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/genre_trends.sql
+
+SELECT
+    Genre,
+    COUNT(*) AS total_songs,
+    SUM(`Streams`) AS total_streams,
+    ROUND(AVG(`Daily Streams`), 2) AS avg_daily_streams,
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Genre
+ORDER BY total_songs DESC
+    );
+  
+[0m13:21:37.480556 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:f489950e-e94a-4e1d-b623-09a1d93bda72&page=queryresults
+[0m13:21:37.501298 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (execute): 13:21:34.244872 => 13:21:37.501093
+[0m13:21:37.502294 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7ee79e0>]}
+[0m13:21:37.503012 [info ] [Thread-1 (]: 1 of 2 OK created sql table model music.genre_trends ........................... [[32mCREATE TABLE (22.0 rows, 111.2 KiB processed)[0m in 3.26s]
+[0m13:21:37.503817 [debug] [Thread-1 (]: Finished running node model.music.genre_trends
+[0m13:21:37.504546 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m13:21:37.505084 [info ] [Thread-1 (]: 2 of 2 START sql table model music.top_artists ................................. [RUN]
+[0m13:21:37.506184 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.music.genre_trends, now model.music.top_artists)
+[0m13:21:37.506762 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m13:21:37.511926 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m13:21:37.514526 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 13:21:37.507089 => 13:21:37.514365
+[0m13:21:37.514824 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m13:21:37.516260 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:21:37.937421 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m13:21:37.940308 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`top_artists`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC
+    );
+  
+[0m13:21:40.839300 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:18854f2c-c9bd-4ac8-98a4-163a5e0d93d0&page=queryresults
+[0m13:21:40.843520 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 13:21:37.515046 => 13:21:40.843258
+[0m13:21:40.844820 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '797a6e8e-804e-4d30-9cb9-3e27b1114375', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaad2aab0>]}
+[0m13:21:40.845665 [info ] [Thread-1 (]: 2 of 2 OK created sql table model music.top_artists ............................ [[32mCREATE TABLE (20.0 rows, 281.5 KiB processed)[0m in 3.34s]
+[0m13:21:40.846450 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m13:21:40.848916 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:21:40.849459 [debug] [MainThread]: Connection 'model.music.top_artists' was properly closed.
+[0m13:21:40.849718 [info ] [MainThread]: 
+[0m13:21:40.850068 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.65 seconds (7.65s).
+[0m13:21:40.850671 [debug] [MainThread]: Command end result
+[0m13:21:40.854884 [info ] [MainThread]: 
+[0m13:21:40.855160 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:21:40.855595 [info ] [MainThread]: 
+[0m13:21:40.856158 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m13:21:40.856485 [debug] [MainThread]: Command `dbt run` succeeded at 13:21:40.856428 after 7.99 seconds
+[0m13:21:40.856708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa58f2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab088c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa82ad2e0>]}
+[0m13:21:40.856881 [debug] [MainThread]: Flushing usage events
+[0m13:26:45.172168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffafb3ffe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffafb3f050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffafb3f710>]}
+
+
+============================== 13:26:45.173618 | b6231c0a-9429-4d55-a9e6-ae821b0c4c26 ==============================
+[0m13:26:45.173618 [info ] [MainThread]: Running with dbt=1.5.11
+[0m13:26:45.173975 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'printer_width': '80', 'log_format': 'default', 'cache_selected_only': 'False', 'log_path': '/usr/local/airflow/include/dbt/logs', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'fail_fast': 'False', 'profiles_dir': '/usr/local/airflow/include/dbt', 'no_print': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'write_json': 'True', 'version_check': 'True', 'target_path': 'None', 'debug': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False'}
+[0m13:26:45.465298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb7ce60>]}
+[0m13:26:45.472958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad9786b0>]}
+[0m13:26:45.473581 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m13:26:45.480643 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m13:26:45.496085 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:26:45.496428 [debug] [MainThread]: Partial parsing: added file: music://models/transform/yearly_streams_trend.sql
+[0m13:26:45.507644 [debug] [MainThread]: 1699: static parser successfully parsed transform/yearly_streams_trend.sql
+[0m13:26:45.520302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad86e570>]}
+[0m13:26:45.525084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad846450>]}
+[0m13:26:45.525393 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 360 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m13:26:45.525664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad8462a0>]}
+[0m13:26:45.526570 [info ] [MainThread]: 
+[0m13:26:45.527100 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:26:45.527859 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_de-project-2025-455709'
+[0m13:26:45.528118 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:26:46.278528 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_de-project-2025-455709, now list_de-project-2025-455709_music)
+[0m13:26:46.279595 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:26:46.783915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad9330b0>]}
+[0m13:26:46.784999 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:26:46.785535 [info ] [MainThread]: 
+[0m13:26:46.791457 [debug] [Thread-1 (]: Began running node model.music.genre_trends
+[0m13:26:46.792159 [info ] [Thread-1 (]: 1 of 3 START sql table model music.genre_trends ................................ [RUN]
+[0m13:26:46.792986 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_de-project-2025-455709_music, now model.music.genre_trends)
+[0m13:26:46.793365 [debug] [Thread-1 (]: Began compiling node model.music.genre_trends
+[0m13:26:46.800256 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.genre_trends"
+[0m13:26:46.802146 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (compile): 13:26:46.793631 => 13:26:46.801962
+[0m13:26:46.802518 [debug] [Thread-1 (]: Began executing node model.music.genre_trends
+[0m13:26:46.813277 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:26:47.326118 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.genre_trends"
+[0m13:26:47.329148 [debug] [Thread-1 (]: On model.music.genre_trends: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.genre_trends"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`genre_trends`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/genre_trends.sql
+
+SELECT
+    Genre,
+    COUNT(*) AS total_songs,
+    SUM(`Streams`) AS total_streams,
+    ROUND(AVG(`Daily Streams`), 2) AS avg_daily_streams,
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Genre
+ORDER BY total_songs DESC
+    );
+  
+[0m13:26:49.825843 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:88830aed-1794-4d62-8013-b0be9645f483&page=queryresults
+[0m13:26:49.841650 [debug] [Thread-1 (]: Timing info for model.music.genre_trends (execute): 13:26:46.802822 => 13:26:49.841472
+[0m13:26:49.842497 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffada21bb0>]}
+[0m13:26:49.843157 [info ] [Thread-1 (]: 1 of 3 OK created sql table model music.genre_trends ........................... [[32mCREATE TABLE (22.0 rows, 111.2 KiB processed)[0m in 3.05s]
+[0m13:26:49.843852 [debug] [Thread-1 (]: Finished running node model.music.genre_trends
+[0m13:26:49.844686 [debug] [Thread-1 (]: Began running node model.music.top_artists
+[0m13:26:49.845401 [info ] [Thread-1 (]: 2 of 3 START sql table model music.top_artists ................................. [RUN]
+[0m13:26:49.846332 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.music.genre_trends, now model.music.top_artists)
+[0m13:26:49.846723 [debug] [Thread-1 (]: Began compiling node model.music.top_artists
+[0m13:26:49.851719 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.top_artists"
+[0m13:26:49.854312 [debug] [Thread-1 (]: Timing info for model.music.top_artists (compile): 13:26:49.847011 => 13:26:49.854109
+[0m13:26:49.854672 [debug] [Thread-1 (]: Began executing node model.music.top_artists
+[0m13:26:49.856380 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:26:50.251268 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.top_artists"
+[0m13:26:50.253617 [debug] [Thread-1 (]: On model.music.top_artists: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.top_artists"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`top_artists`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/top_artists.sql
+
+SELECT
+    Artist,
+    COUNT(DISTINCT Song) AS total_songs,
+    SUM(Streams) AS total_streams,
+    ROUND(AVG(`Peak Position`), 2) AS avg_peak_position,
+    SUM(`Weeks on Chart`) AS total_weeks,
+    ROUND(AVG(`TikTok Virality`), 2) AS avg_tiktok_virality
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY Artist
+ORDER BY total_streams DESC
+    );
+  
+[0m13:26:53.160895 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:4e2b709f-422e-45f3-a806-76b14008a1ba&page=queryresults
+[0m13:26:53.163749 [debug] [Thread-1 (]: Timing info for model.music.top_artists (execute): 13:26:49.854912 => 13:26:53.163562
+[0m13:26:53.164475 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadcdb440>]}
+[0m13:26:53.165017 [info ] [Thread-1 (]: 2 of 3 OK created sql table model music.top_artists ............................ [[32mCREATE TABLE (20.0 rows, 281.5 KiB processed)[0m in 3.32s]
+[0m13:26:53.165776 [debug] [Thread-1 (]: Finished running node model.music.top_artists
+[0m13:26:53.166254 [debug] [Thread-1 (]: Began running node model.music.yearly_streams_trend
+[0m13:26:53.166714 [info ] [Thread-1 (]: 3 of 3 START sql table model music.yearly_streams_trend ........................ [RUN]
+[0m13:26:53.167417 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.music.top_artists, now model.music.yearly_streams_trend)
+[0m13:26:53.167798 [debug] [Thread-1 (]: Began compiling node model.music.yearly_streams_trend
+[0m13:26:53.170522 [debug] [Thread-1 (]: Writing injected SQL for node "model.music.yearly_streams_trend"
+[0m13:26:53.172813 [debug] [Thread-1 (]: Timing info for model.music.yearly_streams_trend (compile): 13:26:53.168068 => 13:26:53.172618
+[0m13:26:53.173155 [debug] [Thread-1 (]: Began executing node model.music.yearly_streams_trend
+[0m13:26:53.175751 [debug] [Thread-1 (]: Writing runtime sql for node "model.music.yearly_streams_trend"
+[0m13:26:53.177151 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:26:53.178812 [debug] [Thread-1 (]: On model.music.yearly_streams_trend: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "music", "target_name": "dev", "node_id": "model.music.yearly_streams_trend"} */
+
+  
+    
+
+    create or replace table `de-project-2025-455709`.`music`.`yearly_streams_trend`
+    
+    
+
+    OPTIONS()
+    as (
+      -- models/marts/yearly_streams_trend.sql
+
+SELECT
+    `Release Year` AS release_year,
+    SUM(Streams) AS total_streams
+FROM `de-project-2025-455709`.`music`.`raw_music_streams`
+GROUP BY `Release Year`
+ORDER BY release_year
+    );
+  
+[0m13:26:55.783801 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=de-project-2025-455709&j=bq:US:cab8d6f3-cba1-4a9c-8199-60e208b24042&page=queryresults
+[0m13:26:55.787300 [debug] [Thread-1 (]: Timing info for model.music.yearly_streams_trend (execute): 13:26:53.173367 => 13:26:55.787016
+[0m13:26:55.788498 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b6231c0a-9429-4d55-a9e6-ae821b0c4c26', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffada150d0>]}
+[0m13:26:55.789921 [info ] [Thread-1 (]: 3 of 3 OK created sql table model music.yearly_streams_trend ................... [[32mCREATE TABLE (36.0 rows, 75.8 KiB processed)[0m in 2.62s]
+[0m13:26:55.791171 [debug] [Thread-1 (]: Finished running node model.music.yearly_streams_trend
+[0m13:26:55.794273 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:26:55.794777 [debug] [MainThread]: Connection 'model.music.yearly_streams_trend' was properly closed.
+[0m13:26:55.795280 [info ] [MainThread]: 
+[0m13:26:55.795975 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 10.27 seconds (10.27s).
+[0m13:26:55.797840 [debug] [MainThread]: Command end result
+[0m13:26:55.807251 [info ] [MainThread]: 
+[0m13:26:55.807827 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:26:55.808320 [info ] [MainThread]: 
+[0m13:26:55.808871 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m13:26:55.809660 [debug] [MainThread]: Command `dbt run` succeeded at 13:26:55.809369 after 10.64 seconds
+[0m13:26:55.810073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffafc03f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffae4a8e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb0292150>]}
+[0m13:26:55.810526 [debug] [MainThread]: Flushing usage events

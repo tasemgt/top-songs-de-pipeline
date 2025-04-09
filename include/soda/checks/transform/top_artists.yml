@@ -1,0 +1,11 @@
+checks for top_artists:
+  - schema:
+      fail:
+        when required column missing: 
+          [Artist, total_songs, total_streams]
+        when wrong column type:
+          Artist: string
+          total_songs: integer
+          total_streams: integer
+  - duplicate_count(Artist) = 0:
+      name: All artists are unique
