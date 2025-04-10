@@ -132,7 +132,7 @@ Prequisites:
 6. **Metabase**
     - Visit `http://localhost:3000` to open Metabase web interface and create a new account if not present.
     - Fill in your personal details
-    - Add projectID, service account `gcp-creds.json` file and then connect!
+    - Add projectID, service account `de-creds.json` file and then connect!
     - Select new and add a question to select a transformed dataset for visualization
     - Select either ‘Genre Trends’, ‘Total Artists’, and ‘Yearly Streams Trend’
     - Play around with data and make your own custom visualization.
@@ -143,4 +143,4 @@ Prequisites:
 
 Contact
 =======
-Connect with me on LinkedIn: [Michael Tase](https://www.linkedin.com/in/michael-tase-4151216a)
+Connect with me on LinkedIn ❤️ : [Michael Tase](https://www.linkedin.com/in/michael-tase-4151216a)
