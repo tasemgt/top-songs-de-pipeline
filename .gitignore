@@ -1,6 +1,6 @@
 .git
 .env
-.DS_Store
+.DS_Storec
 __pycache__/
 astro
 .venv
