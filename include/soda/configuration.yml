@@ -9,8 +9,8 @@ data_source music:
     project_id: 'de-project-2025-455709'
     dataset: music
 
-# For soda cloud Integration (Optional)
-soda_cloud:
-  host: cloud.soda.io
-  api_key_id: ${SODA_API_KEY_ID} #Or put your soda api key id
-  api_key_secret: ${SODA_API_KEY_SECRET} #Or put your soda api key secret
+# For soda cloud Integration, remove comments and add your creds (Optional)
+# soda_cloud:
+#   host: cloud.soda.io
+#   api_key_id: ${SODA_API_KEY_ID} #Or put your soda api key id
+#   api_key_secret: ${SODA_API_KEY_SECRET} #Or put your soda api key secret
