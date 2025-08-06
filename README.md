@@ -1,6 +1,6 @@
 Billboard Top Songs Data Engineering Project 🎶 📊
 ========
-This is the project submission for the [DE Zoomcamp 2025](https://github.com/DataTalksClub/data-engineering-zoomcamp). It features the designing and building of a complete end-to-end data engineering pipeline for the Billboard Top Songs dataset using modern tools and best practices.
+This project features the designing and building of a complete end-to-end data engineering pipeline for the Billboard Top Songs dataset using modern tools and best practices.
 
 
 About the Dataset
